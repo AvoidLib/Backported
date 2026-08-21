@@ -4,8 +4,12 @@
   "package": "pl.olafcio.backported.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BlocksMixin",
+    "DataComponentsMixin",
+    "LivingEntityMixin"
   ],
   "client": [
+    "LocalPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
