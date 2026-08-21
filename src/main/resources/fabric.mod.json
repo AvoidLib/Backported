@@ -6,7 +6,7 @@
   "description": "Backports technical things to modern versions from newer versions.",
   "authors": ["Olafcio"],
   "contact": {},
-  "license": "Polyform Shield",
+  "license": "Polyform Perimeter 1.0.1",
   "icon": "assets/backported/icon.png",
   "environment": "*",
   "entrypoints": {
