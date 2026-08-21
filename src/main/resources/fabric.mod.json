@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "backported",
+  "version": "${version}",
+  "name": "Backported",
+  "description": "Backports technical things to modern versions from newer versions.",
+  "authors": ["Olafcio"],
+  "contact": {},
+  "license": "Polyform Shield",
+  "icon": "assets/backported/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "pl.olafcio.backported.client.BackportedClient"
+    ],
+    "main": [
+      "pl.olafcio.backported.Backported"
+    ]
+  },
+  "mixins": [
+    "backported.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
