@@ -9,6 +9,7 @@
   "license": "Polyform Perimeter 1.0.1",
   "icon": "assets/backported/icon.png",
   "environment": "*",
+  "accessWidener": "backported.accesswidener",
   "entrypoints": {
     "client": [
       "pl.olafcio.backported.client.BackportedClient"

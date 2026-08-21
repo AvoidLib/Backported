@@ -8,15 +8,22 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import pl.olafcio.backported.BackportedDataComponents;
+import pl.olafcio.backported.mixininterface.ILivingEntity;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin
        extends Entity
+       implements ILivingEntity
 {
+    @Shadow public abstract boolean isUsingItem();
+    @Shadow public abstract ItemStack getUseItem();
+    @Shadow public abstract ItemStack getMainHandItem();
+
     public LivingEntityMixin(EntityType<?> entityType, Level level) {
         super(entityType, level);
     }
@@ -32,5 +39,10 @@ public abstract class LivingEntityMixin
         if (useEffects != null && useEffects.interactVibrations()) {
             this.gameEvent(reference);
         }
+    }
+
+    @Override
+    public ItemStack backported_attr$getActiveItem() {
+        return this.isUsingItem() ? this.getUseItem() : this.getMainHandItem();
     }
 }

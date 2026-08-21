@@ -6,10 +6,17 @@
   "mixins": [
     "BlocksMixin",
     "DataComponentsMixin",
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "MobMixin",
+    "PlayerMixin",
+    "ServerboundInteractPacketMixin",
+    "ServerGamePacketListenerImplMixin"
   ],
   "client": [
-    "LocalPlayerMixin"
+    "GameRendererMixin",
+    "GuiMixin",
+    "LocalPlayerMixin",
+    "MinecraftMixin"
   ],
   "injectors": {
     "defaultRequire": 1
