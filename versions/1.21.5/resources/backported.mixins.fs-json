@@ -1,1 +1,2 @@
 this['mixins'].append("ClickEventActionMixin")
+this['client'].append("ModelPartMixin")
