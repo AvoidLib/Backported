@@ -1,0 +1,8 @@
+{
+    classTweaker v2 named
+    classTweaker v2 named
+
+    transitive-accessible class net/minecraft/world/entity/Entity$Movement
+    transitive-inject-interface net/minecraft/world/level/material/FluidState pl/olafcio/backported/mixininterface/IFluidState
+    transitive-inject-interface net/minecraft/world/level/material/Fluid pl/olafcio/backported/mixininterface/IFluid
+}

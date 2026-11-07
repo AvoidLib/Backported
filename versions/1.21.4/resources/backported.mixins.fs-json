@@ -1,0 +1,2 @@
+this['mixins'].append("EntityMixin")
+this['mixins'].append("StyleMixin")
